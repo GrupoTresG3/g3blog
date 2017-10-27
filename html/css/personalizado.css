@@ -1,0 +1,91 @@
+.row.content {
+	height: 450px;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+    
+aside {
+  padding-top: 20px;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+
+.carousel-indicators li{
+  background:#808080;
+}
+.carousel-indicators .active{
+  background:black;
+}
+
+#seccionwpo{
+  margin-top: 10em;
+}
+
+
+
+
+/*FOOTER */
+
+footer {
+    padding: 50px 0 20px 0;
+    background-color: #35404f;
+    color: #878c94;
+    margin-top: 11.5em;
+    display: block;
+}
+footer h4{
+	text-align: left;
+	color:white;
+	font-size:25px;
+	}
+
+
+footer .redes-sociales a{
+	display:inline-block;
+	color:white;
+	font-size:25px;
+	padding:5px;
+}
+
+
+footer ul{
+	margin:0px;
+	padding:0px;
+	list-style-type:none
+}
+
+footer li a {
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    float: left;
+    font-size: 25px;
+    padding: 10px 10px;
+}
+    
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 900px) {
+
+  .row.content {
+    height:auto;
+  } 
+  #dificultadesli{
+  border-top: 2px solid transparent;
+  border-image: linear-gradient(to right, white 0%, gray 100%); 
+  border-image-slice: 1;     
+  }
+
+  footer{
+    margin-top: 2em;
+  }
+
+}

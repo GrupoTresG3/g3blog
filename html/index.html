@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Wiki 2 G3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- iconos tarjetas credito... -->
+  <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+
+<!-- Script del Tooltip de las redes sociales -->
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>
+
+
+
+  <link rel="stylesheet" type="text/css" href="css/personalizado.css">
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navegador">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Wiki 2 G3</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navegador">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="phpmysql.html">PHP-MySql</a></li>
+        <li><a href="wordpress.html">Wordpress</a></li>
+        <li><a href="prestashop.html">PrestaShop</a></li>
+        <li><a href="owncloud.html">OwnCloud</a></li>
+        <li id="dificultadesli"><a href="dificultades.html">Dificultades</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<section class="container text-center row content">  
+
+
+
+  <div id="carrusel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+    <li data-target="#carrusel" data-slide-to="0" class="active"></li>
+    <li data-target="#carrusel" data-slide-to="1"></li>
+    </ol>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+      <div class="item active">
+        <article id="indicearticulo" class="jumbotron col-sm-offset-2 col-sm-8 text-left"> 
+        <h1 class="page-header">Bienvenido</h1>
+        <p>Bienvenido a Wiki2G3, la wiki en la que te mostraremos varios tutoriales en los que aprenderás a desplegar aplicaciones web con distintos gestores de contenido.
+        <div class="table-responsive">   
+        <table class="table">
+        <thead>
+        <tr>
+        <th>Codigo tutorial</th>
+        <th>Nombre</th>
+        <th>Duración</th>
+        <th>Dificultad</th>
+        <th>Descargar</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr class="success">
+        <td>1</td>
+        <td>PHP-MySql</td>
+        <td>20 minutos</td>
+        <td>Fácil</td>
+        <td><a href="Documentos/doc.txt" download="PHP-Mysql">Descarga</a></td>
+        </tr>
+        <tr class="success">
+        <td>3</td>
+        <td>OwnCloud</td>
+        <td>180 minutos</td>
+        <td>Fácil</td>
+        <td><a href="Documentos/doc.txt" download="PHP-Mysql">Descarga</a></td>
+        </tr>
+        <tr class="warning">
+        <td>2</td>
+        <td>Wordpress</td>
+        <td>180 minutos</td>
+        <td>Media</td>
+        <td><a href="Documentos/doc.txt" download="PHP-Mysql">Descarga</a></td>
+        </tr>
+
+        <tr class="danger">
+        <td>4</td>
+        <td>PrestaShop</td>
+        <td>120 minutos</td>
+        <td>Difícil</td>
+        <td><a href="Documentos/doc.txt" download="PHP-Mysql">Descarga</a></td>
+        </tr>
+        </tbody>
+        </table>
+        </div>
+        </article>
+      </div>
+
+    <div class="item">
+      <article id="indicearticulo" class="jumbotron col-sm-offset-2 col-sm-8 text-left"> 
+      <h1 class="page-header">Problemas</h1>
+      <p>En esta sección se expondran los diferentes problemas que hemos ido encontrando en el transcurso del reto.</p>
+      <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/incorrecto.png" alt="imagen incorrecto">
+      <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/Flecha-derecha.png" alt="">
+      <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/correcto.png" alt="imagen correcto">
+      </article>
+    </div>
+
+
+  <!-- Left and right controls -->
+  <a class="left carousel-control" href="#carrusel" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carrusel" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</section>
+
+
+<!-- Three columns of text below the carousel -->
+<section id="seccionwpo" class="container text-justify">
+  
+
+      <div class="row">
+
+
+        <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <img class="rounded-circle" src="imagenes/owncloud.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Owncloud</h2>
+          <p>Es una aplicación de software libre del tipo Servicio de alojamiento de archivos, que permite el almacenamiento en línea y aplicaciones en línea (cloud computing). </p>
+          <p><button class="btn btn-primary" href="#" role="button">Ver más >></button></p>
+        </article>
+
+
+        <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <img class="rounded-circle" src="imagenes/prestashop.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Prestashop</h2>
+          <p>Es un sistema gestor de contenidos (CMS) libre y de código abierto. Su principal aplicación es la creación de tiendas online de comercio electrónico.</p>
+          <p><button class="btn btn-primary" href="#" role="button">Ver más >></button></p>
+        </article>
+
+
+        <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+          <img class="rounded-circle" src="imagenes/wordpress.png" alt="Generic placeholder image" width="140" height="140">
+          <h2>Wordpress</h2>
+          <p>WordPress es un sistema de gestión de contenidos (por sus siglas en inglés, Content Management System) enfocado a la creación de cualquier tipo de sitio web.</p>
+          <p><button class="btn btn-primary" href="#" role="button">Ver más >></button></p>
+        </article>
+
+
+      </div>
+
+
+
+
+</section>
+
+<!-- FOOTER -->
+    
+    <footer>
+    <div class="container">
+        <div class="row">
+        <!-- Salta columnas(offset) y ocupa 3 -->
+        <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4">
+            <h4>Contacto</h4>
+            <p></p>
+            <ul class="redes-sociales">
+            <a href="https://www.facebook.com" data-toggle="tooltip" data-placement="bottom" title="¡Facebook!"><i class="fa fa-facebook"></i></a>
+
+            <a href="https://www.twitter.com" data-toggle="tooltip" data-placement="bottom" title="¡Twitter!"><i class="fa fa-twitter"></i></a>
+
+            <a href="https://www.youtube.com" data-toggle="tooltip" data-placement="bottom" title="¡Youtube!"><i class="fa fa-youtube-play"></i></a>
+
+            <a href="https://plus.google.com" data-toggle="tooltip" data-placement="bottom" title="¡Google +!"><i class="fa fa-google"></i></a>
+            </ul>
+            </div>
+      
+        <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4">
+            <h4>¡Dona a nuestra Wiki!</h4>
+            <p>Haz un donativo a nuestra Wiki, así podremos seguir realizando tutoriales.</p>
+            <ul>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="American Express"><i class="fa fa-cc-amex"></i></a></li>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="PayPal"><i class="fa fa-paypal"></i></a></li>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Visa"><i class="fa fa-cc-visa"></i></a></li>
+            <li><button class="btn btn-primary disabled" data-toggle="modal" data-target="#myModal" type="">Donar</button></li>
+
+            </ul>
+            </div>
+
+            <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4">
+              <h4>Sugerencias</h4>
+              <a href="mailto:contacto@WikiG3.com"">contacto@WikiG3.com</a>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="text-center"> © 2017-2018. Wiki 2 G3 Copyright.</div>
+        </div>
+    </footer>
+    
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+      
+        <!-- header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Mensaje</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- body -->
+        <div class="modal-body">
+          Lamentablemente no es posible realizar esta acción actualmente.
+          Estamos trabajando en ello.
+          Atentamente, Wiki2 G3 NAVD.
+        </div>
+        
+        <!-- footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- FIN MODAL -->
+
+
+
+
+</body>
+</html>
