@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Wiki 2 G3</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- iconos tarjetas credito... -->
+  <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+
+
+
+
+
+  <link rel="stylesheet" type="text/css" href="css/personalizado.css">
+  
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navegador">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="index.html">Wiki 2 G3</a>
+    </div>
+    <div class="collapse navbar-collapse" id="navegador">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="index.html">Inicio</a></li>
+        <li><a href="#">PHP-MySql</a></li>
+        <li><a href="#">Wordpress</a></li>
+        <li><a href="#">PrestaShop</a></li>
+        <li><a href="#">OwnCloud</a></li>
+        <li id="dificultadesli"><a href="dificultades.html">Dificultades</a></li>
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+<ul class="breadcrumb">
+  <li><a href="index.html">Inicio</a></li>
+  <li>OwnCloud+'0mik9¡
+  8</li>
+</ul> 
+<section class="container text-center row content">    
+  <aside class="col-xs-12 col-sm-2">
+      <p><a href="#1">Descarga OwnCloud</a></p>
+      <p><a href="#2">Descomprimir</a></p>
+      <p><a href="#3">Mover Carpeta</a></p>
+      <p><a href="#4">Comprobar IP</a></p>
+      <p><a href="#5">Dar Permisos</a></p>
+      <p><a href="#6">Comprobar Errores</a></p>
+      <p><a href="#7">Resolver Errores</a></p>
+      <p><a href="#8">Reiniciar Servidor</a></p>
+      <p><a href="#9">Conexión MySql</a></p>
+      <p><a href="#10">Creación BD</a></p>
+      <p><a href="#11">Creación Usuario</a></p>
+      <p><a href="#12">Salir MySql</a></p>
+      <p><a href="#13">Conexion desde Owncloud</a></p>
+      <p><a href="#14">Logueo en OwnCloud</a></p>
+      <p><a href="#15">Interfaz Owncloud</a></p>
+      <p><a href="#16">Owncloud Market</a></p>
+      <p><a href="#17">Text Editor</a></p>
+      <p><a href="#18">Instalacion PlugIn</a></p>
+      <p><a href="#19">Comprobar PlugIn</a></p>
+
+        
+  </aside>
+
+  <!-- Aqui se incluye el cont enido 
+  https://www.w3schools.com/bootstrap/bootstrap_typography.asp
+  <img class="img-rounded img-responsive" src="imagenes/correcto.png" alt="PONERALGOAQUI">-->
+  <article class="text-left col-sm-8 text-left"> 
+      <h1> OwnCloud </h1>
+    <ul class="list-unstyled">
+      <li><a name="1"></a> <h3>Descarga OwnCloud</h3> 
+        <p>Lo primero sera descargar la ultima version de ownCloud, es muy facil de descargar ya que solo hay que comprobar que tenemos conexión a internet, y ecribir el siguiente comando:</p>
+        <code>wget http://download.owncloud.org/community/owncloud-latest.tar.bz2</code>
+      </li>   
+      <li><a name="2"></a><h3>Descomprimir</h3> 
+        <p>Lo que hemos descargado es un <span class="text-info">archivo comprimido</span>, así que hay que descomprimirlo usando el comando <mark>tar</mark> el cual ya viene por defecto con ubuntu.</p>
+        <code>tar -xjf owncloud-latest.tar.bz2</code>
+      </li>
+      <li><a name="3"></a> <h3>Mover Carpeta</h3> 
+        <p>Lo que obtendremos será una carpeta llamada “owcloud”, esa carpeta hay que moverla a nuestro <span class="bg-primary">/var/www/html/</span> para que sea accesible desde el navegador.</p>
+        <code>sudo mv owncloud /var/www/html/</code>
+      </li>  
+      <li><a name="4"></a> <h3>Comprobar IP</h3> 
+        <p>Ahora, yendo al servidor y poniendo nuestra ip más “/owncloud”  <span class="bg-info">x.x.x.x/owncloud</span> nos llevaría a la creación de usuario admin y conexión a la base de datos, pero aun no nos dejaría crearlos ya que no tiene permisos para modificar nuestra carpeta, así que hay que darle permisos, lo primero es entrar a la carpeta:</p>
+        <code>cd /var/www/html/</code>
+      </li>    
+      <li><a name="5"></a><h3>Dar Permisos</h3> 
+        <p>Una vez dentro, usaremos el siguiente comando para darle permisos de edición a nuestea carpeta <mark>ownCloud</mark></p>
+        <code>sudo chown -R www-data:www-data owncloud</code>
+      </li>
+      <li><a name="6"></a> <h3>Comprobar Errores</h3> 
+        <p>Una vez hecho esto, accederemos desde el navegador. Recordad que se accede asi... <span class="bg-info">x.x.x.x/owncloud</span></p>
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/1.png" alt="Se accede a la pagina correctamente, pero tiene errores">
+      </li> 
+      <li> <a name="7"></a><h3>Resolver Errores</h3> 
+        <p>Puede que nos de <span class="text-danger">algunos errores</span> como se ve en la imagen anterior, así que habra que <mark></mark>instalar</mark> algunos los siguientes paquetes.</p>
+        <code>apt-get install php7.0-url</code><br>
+        <code>apt-get install php7.0-SimpleXML</code><br>
+        <code>apt-get install php7.0-mbstring</code><br>
+        <code>apt-get install php7.0-zip</code><br>
+      </li> 
+      <li> <a name="8"></a><h3>Reiniciar Servidor</h3> 
+        <p>Una vez instalados, <span class="bg-primary">reiniciamos nuestro apache</span>, y volveremos a acceder</p>
+        <code>service apache2 restart</code>
+      </li>
+      <li><a name="9"></a><h3>Conexión MySql</h3> 
+        <p>Lo siguiente es crear una base de datos y un usuario que pueda acceder a dicha base de datos, para ello tendremos que entrar al MySql usando:</p>
+        <code>mysql -u root -p</code>
+      </li>  
+      <li><a name="10"></a><h3>Creación BD</h3> 
+        <p>Ahora creamos una Base de Datos, para ellos usaremos: </p>
+        <code>CREATE DATABASE Grupo3BD;</code>
+      </li>
+      <li><a name="11"></a><h3>Creación Usuario</h3> 
+        <p>Ahora crearemos un usuario que pueda acceder a la base de datos: </p>
+        <code>GRANT ALL ON Grupo3BD.* TO Grupo3@'localhost' IDENTIFIED BY 'password';</code>
+      </li>  
+      <li><a name="12"></a><h3>Salir MySql</h3> 
+        <p>Y ya habremos acabado de usar el MySql, saldremos de el escribiendo <code>quit</code> </p> 
+      </li>  
+      <li><a name="13"></a><h3>Conexion desde Owncloud</h3> 
+        <p> Ahora vamos al navegador y rellenaremos los campos acorde a la base de datos que hemos creado.</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/2.png" alt="Se rellenan los campos basandose en nuestros campos">
+      </li> 
+      <li><a name="14"></a><h3>Logueo en OwnCloud</h3> 
+        <p>Cuando le demos a Completar la instalacion, nos pedira que nos logueemos, una vez dentro, <span class="bg-success">ya tendremos nuestro owncloud listo</span> para usarse</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/3.png" alt="Login en nuestea pagina">
+      </li> 
+      <li><a name="15"></a><h3>Interfaz Owncloud</h3> 
+        <p>Ahora ya podemos usar nuestro owncloud, pero no al 100%, solo podremos subir y descargar archivos aparte de compartirlos con otros usuarios</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/4.png" alt="Limitacion de ownCloud">
+      </li> 
+      <li><a name="16"></a><h3>Owncloud Market</h3> 
+        <p>Desde ownCloud se pueden subir y descargar ficheros, pero no se pueden editar en línea, un plugin muy interesante sería el Text Editor, que nos permite editar en línea, para instalarlo hay que clicar en Archivos → Market, iremos al mercado de plugins de ownCloud</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/5.png" alt="Owncloud Market">
+      </li>
+      <li><a name="17"></a><h3>Text Editor</h3> 
+        <p>Buscaremos dicho Plugin, y clicamos en el.</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/6.png" alt="Text Editor Plugin">
+      </li>  
+      <li><a name="18"></a><h3>Instalacion PlugIn</h3> 
+        <p>Y le damos a Instalar.</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/7.png" alt="Limitacion de ownCloud">
+      </li>  
+      <li><a name="19"></a><h3>Comprobar PlugIn</h3> 
+        <p>Y ahora podremos crear y editar archivos .txt desde el propio ownCloud.</p> 
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/8.png" alt="Limitacion de ownCloud">
+      </li>
+
+
+
+
+    </ul>
+
+  
+  </article>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+    
+
+</body>
+</html>
