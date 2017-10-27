@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <title>Instalación WordPress</title>
+
+  <meta charset="utf-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <link rel="stylesheet" type="text/css" href="css/personalizado.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- Iconos tarjetas credito... -->
+  <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
+</head>
+
+<!------------------------------------------------------>
+
+<body>
+  
+  <!-- NAVEGADOR -->
+  <nav class="navbar navbar-inverse">
+
+    <div class="container-fluid">
+
+      <!-- BOTÓN DE 3 RAYAS -->
+      <div class="navbar-header">
+        
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navegador">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                 
+        </button>
+
+        <a class="navbar-brand" href="index.html">Wiki 2 G3</a>
+
+      </div>      
+      <!-- FIN BOTÓN DE 3 RAYAS -->
+
+
+      <!-- ENLACES HACIA LOS DEMÁS TUTORIALES -->
+      <div class="collapse navbar-collapse" id="navegador">
+        <ul class="nav navbar-nav">
+
+          <li class="active"><a href="index.html">Inicio</a></li>
+
+          <li><a href="phpmysql.html">PHP-MySql</a></li>
+
+          <li><a href="#">Wordpress</a></li>
+
+          <li><a href="prestashop.html">PrestaShop</a></li>
+
+          <li><a href="owncloud.html">OwnCloud</a></li>
+
+          <li id="dificultadesli"><a href="dificultades.html">Dificultades</a></li>
+        </ul>
+
+      </div>
+      <!-- FIN ENLACES HACIA LOS DEMÁS TUTORIALES -->
+
+    </div>
+
+  </nav>
+  <!-- FIN NAVEGADOR -->
+
+
+
+  <!-------------------------------------------------->
+
+
+
+  <!-- AYUDA DE LA RUTA EN LA QUE ESTÁS -->
+  <ul class="breadcrumb">
+
+    <li><a href="index.html">Inicio</a></li>
+
+    <li>Tutorial instalación Wordpress</li>
+
+  </ul> 
+  <!-- FIN AYUDA DE LA RUTA EN LA QUE ESTÁS -->
+
+
+
+  <!-------------------------------------------------->
+
+
+
+  <!-- CONTENEDOR PRINCIPAL -->
+  <section class="container text-center row content"> 
+
+    <!-- MENÚ DE LA IZQUIERDA DE PASOS -->   
+    <aside class="col-xs-12 col-sm-2">
+      <p><a href="#paso1">1.Conectar MySQL</a></p>
+      <p><a href="#paso2">2.Crear BD</a></p>
+      <p><a href="#paso3">3.Crear usuario BD</a></p>
+      <p><a href="#paso4">4.Acceso usuario</a></p>
+      <p><a href="#paso5">5.Descargar wordpress</a></p>
+      <p><a href="#paso6">6.Extraer archivos</a></p>
+      <p><a href="#paso7">7.Instalar paquetes</a></p>
+      <p><a href="#paso8">8.Copiar archivo</a></p>
+      <p><a href="#paso9">9.Cambiar archivo</a></p>
+      <p><a href="#paso10">10.Cambiar ruta</a></p>
+      <p><a href="#paso11">11.Dar permisos</a></p>
+      <p><a href="#paso12">12.Directorio uploads</a></p>
+    </aside>
+    <!-- FIN MENÚ DE LA IZQUIERDA DE PASOS-->
+
+
+
+    <!-------------------------------------------------->
+
+
+
+    <!-- CONTENEDOR CONTENIDO DEL MANUAL -->    
+    <article class="text-left col-sm-8 text-left"> 
+      
+      <!-- TÍTULOS DEL MANUAL -->
+      <h1>WordPress <small>Instalación</small></h1>
+      
+      <!-- PASOS DEL MANUAL -->
+      <ul class="list-unstyled">
+        
+        <!-- PASO 1 -->
+        <li id="paso1">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Conexión MySQL</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Nos conectaremos en mysql para crear la base de datos donde se guardará el contenido de WordPress.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>mysql -u root -p</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/1.png" alt="Nos conectamos a MySQL.">
+
+        </li>
+        <!-- FIN PASO 1 -->  
+        
+
+        <!------------------------------------------>
+
+
+        <!-- PASO 2 -->
+        <li id="paso2">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Creación BD</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Crearemos la base de datos, en este caso “wordpress”.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>CREATE DATABASE wordpress;</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/2.png" alt="Creamos la base de datos.">
+
+        </li>
+        <!-- FIN PASO 2 --> 
+
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 3 -->
+        <li id="paso3">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Creación usuario</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Crearemos un usuario con su contraseña para acceder a la base de datos creada en el paso anterior.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>CREATE USER userbd@localhost IDENTIFIED BY 'userbd';</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/3.png" alt="Creamos el usuario de la base de datos.">
+
+        </li>
+        <!-- FIN PASO 3 -->  
+        
+
+        <!------------------------------------------>
+
+
+        <!-- PASO 4 -->
+        <li id="paso4">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Acceso BD</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Le daremos acceso al usuario a la base de datos y después, para que mysql sepa que hemos realizado cambios sobre los privilegios, haremos un “FLUSH PRIVILEGES”.</p>
+
+          <!-- COMANDOS USADOS EN EL PASO -->
+          <code>GRANT ALL PRIVILEGES ON wordpress.* TO userbd@localhost;</code><br>          
+          <code>FLUSH PRIVILEGES;</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/4.png" alt="Asignamos permisos al usuario para acceder.">
+
+        </li>
+        <!-- FIN PASO 4 --> 
+
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 5 -->
+        <li id="paso5">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Descarga archivos WordPress</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Descargaremos los archivos de WordPress de la página web oficial.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>wget https://es.wordpress.org/wordpress-4.8.2-es_ES.tar.gz</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/5.png" alt="Descargamos los archivos de WordPress.">
+
+        </li>
+        <!-- FIN PASO 5 -->  
+        
+
+        <!------------------------------------------>
+
+
+        <!-- PASO 6 -->
+        <li id="paso6">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Extracción archivos</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Extraeremos los archivos.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>tar xzvf wordpress-4.8.2-es_ES.tar.gz</code>
+
+          <!-- IMÁGENES DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/6.png" alt="Extraemos los archivos.">
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/7.png" alt="Comprobamos que se han extraido correctamente.">
+
+        </li>
+        <!-- FIN PASO 6 --> 
+
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 7 -->
+        <li id="paso7">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Instalación paquetes</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Instalaremos los paquetes “php5-gd” y “libssh2-php” para poder trabajar con imágenes, plugins y SSH.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>apt-get install php5-gd libssh2-php</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/8.png" alt="Instalamos los paquetes.">
+
+        </li>
+        <!-- FIN PASO 7 -->  
+        
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 8 -->
+        <li id="paso8">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Copia del archivo de configuración</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Copiaremos el archivo de configuración de ejemplo “wp-config-sample.php” a la localización del archivo de configuración por defecto “wp-config.php” para que WordPress lo reconozca.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>cp -wp-config-sample.php wp-config.php</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/9.png" alt="Copiamos el archivo de configuración.">
+
+        </li>
+        <!-- FIN PASO 8 -->  
+        
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 9 -->
+        <li id="paso9">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Modificación archivo</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Cambiaremos el archivo del paso anterior “wp-config.php” para que WordPress se pueda conectar a la base de datos creada.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>nano wp-config.php</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/10.png" alt="Modificamos el archivo.">
+
+        </li>
+        <!-- FIN PASO 9 -->  
+        
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 10 -->
+        <li id="paso10">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Copia de archivos</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Copiaremos los archivos de WordPress a la raíz de documentos de nuestro servidor web “/var/www/html”.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>cp -r ~/wordpress/* /var/www/html</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/11.png" alt="Copiamos los archivos.">
+
+        </li>
+        <!-- FIN PASO 10 -->  
+        
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 11 -->
+        <li id="paso11">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Asignar permisos</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Le damos permisos en todo el directorio para poder subir imágenes, etc.</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>chown -R www-data:www-data *</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/12.png" alt="Asignamos los permisos.">
+
+        </li>
+        <!-- FIN PASO 11 -->  
+        
+
+        <!------------------------------------------>
+        
+
+        <!-- PASO 12 -->
+        <li id="paso12">
+          
+          <!-- TÍTULO DEL PASO -->
+          <h3>Creación directorio uploads</h3>
+
+          <!-- TEXTO DEL PASO -->
+          <p>Crearemos manualmente el directorio de uploads (Este será el repositorio padre de nuestro contenido).</p>
+
+          <!-- COMANDO USADO EN EL PASO -->
+          <code>mkdir /var/www/html/wp-content/uploads</code>
+
+          <!-- IMÁGEN DEL PASO -->
+          <img class="img-rounded img-responsive" src="imagenes/wordpress/instalacion/13.png" alt="Creamos el directorio uploads.">
+
+        </li>
+        <!-- FIN PASO 12 -->     
+
+      
+      
+
+      </ul>
+      <!-- FIN PASOS DEL MANUAL -->
+
+    </article>
+    <!-- FIN CONTENEDOR CONTENIDO DEL MANUAL -->
+
+  </section>
+  <!-- FIN CONTENEDOR PRINCIPAL -->
+
+</body>
+</html>
