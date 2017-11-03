@@ -12,12 +12,6 @@
   <script src="https://use.fontawesome.com/07b0ce5d10.js"></script>
 
 
-<!-- Script del Tooltip de las redes sociales -->
-<script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-</script>
 
 
 
@@ -39,8 +33,8 @@ $(document).ready(function(){
     <div class="collapse navbar-collapse" id="navegador">
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.html">Inicio</a></li>
-        <li><a href="phpmysql.html">PHP-MySql</a></li>
-        <li><a href="wordpress.html">Wordpress</a></li>
+        <li><a href="php-mysql.html">PHP-MySql</a></li>
+        <li><a href="wordpressI.html">Wordpress</a></li>
         <li><a href="prestashop.html">PrestaShop</a></li>
         <li><a href="owncloud.html">OwnCloud</a></li>
         <li id="dificultadesli"><a href="dificultades.html">Dificultades</a></li>
@@ -53,7 +47,7 @@ $(document).ready(function(){
 
 
 
-<section class="container text-center row content">  
+<section id="seccionbienvenido" class="container text-center row content">  
 
 
 
@@ -62,11 +56,12 @@ $(document).ready(function(){
     <ol class="carousel-indicators">
     <li data-target="#carrusel" data-slide-to="0" class="active"></li>
     <li data-target="#carrusel" data-slide-to="1"></li>
+
     </ol>
     <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
-        <article id="indicearticulo" class="jumbotron col-sm-offset-2 col-sm-8 text-left"> 
+        <article id="indicearticulo" class="col-sm-offset-2 col-sm-8 text-left"> 
         <h1 class="page-header">Bienvenido</h1>
         <p>Bienvenido a Wiki2G3, la wiki en la que te mostraremos varios tutoriales en los que aprenderás a desplegar aplicaciones web con distintos gestores de contenido.
         <div class="table-responsive">   
@@ -117,7 +112,7 @@ $(document).ready(function(){
       </div>
 
     <div class="item">
-      <article id="indicearticulo" class="jumbotron col-sm-offset-2 col-sm-8 text-left"> 
+      <article id="indicearticulo" class="col-sm-offset-2 col-sm-8 text-left"> 
       <h1 class="page-header">Problemas</h1>
       <p>En esta sección se expondran los diferentes problemas que hemos ido encontrando en el transcurso del reto.</p>
       <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/incorrecto.png" alt="imagen incorrecto">
@@ -125,6 +120,8 @@ $(document).ready(function(){
       <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/correcto.png" alt="imagen correcto">
       </article>
     </div>
+
+
 
 
   <!-- Left and right controls -->
@@ -139,34 +136,32 @@ $(document).ready(function(){
 </section>
 
 
-<!-- Three columns of text below the carousel -->
 <section id="seccionwpo" class="container text-justify">
   
 
       <div class="row">
 
 
-        <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <article class="jumbotron col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <img class="rounded-circle" src="imagenes/owncloud.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Owncloud</h2>
           <p>Es una aplicación de software libre del tipo Servicio de alojamiento de archivos, que permite el almacenamiento en línea y aplicaciones en línea (cloud computing). </p>
-          <p><button class="btn btn-primary" href="#" role="button">Ver más >></button></p>
+          <a href="/owncloud"><p><button class="btn btn-primary" role="button">Ver más >></button></p></a>
         </article>
 
 
-        <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <article class="jumbotron col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <img class="rounded-circle" src="imagenes/prestashop.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Prestashop</h2>
-          <p>Es un sistema gestor de contenidos (CMS) libre y de código abierto. Su principal aplicación es la creación de tiendas online de comercio electrónico.</p>
-          <p><button class="btn btn-primary" href="#" role="button">Ver más >></button></p>
+          <p>Es un sistema gestor de contenidos (CMS) libre y de código abierto. Su principal aplicación es la creación de tiendas online de comercio electrónico.El software está escrito en PHP.</p>
+          <a href="/prestashop"><p><button class="btn btn-primary" role="button">Ver más >></button></p></a>
         </article>
 
-
-        <article class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+        <article class="jumbotron col-xs-12 col-sm-12 col-md-4 col-lg-4">
           <img class="rounded-circle" src="imagenes/wordpress.png" alt="Generic placeholder image" width="140" height="140">
           <h2>Wordpress</h2>
           <p>WordPress es un sistema de gestión de contenidos (por sus siglas en inglés, Content Management System) enfocado a la creación de cualquier tipo de sitio web.</p>
-          <p><button class="btn btn-primary" href="#" role="button">Ver más >></button></p>
+          <a href="/wordpress"><p><button class="btn btn-primary" role="button">Ver más >></button></p></a>
         </article>
 
 
@@ -236,7 +231,7 @@ $(document).ready(function(){
         <div class="modal-body">
           Lamentablemente no es posible realizar esta acción actualmente.
           Estamos trabajando en ello.
-          Atentamente, Wiki2 G3 NAVD.
+          Atentamente, Wiki2 G3.
         </div>
         
         <!-- footer -->
@@ -254,3 +249,10 @@ $(document).ready(function(){
 
 </body>
 </html>
+
+<!-- Script del Tooltip de las redes sociales -->
+<script>
+$(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();
+});
+</script>

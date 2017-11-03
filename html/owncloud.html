@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <title>Wiki 2 G3</title>
+  <title>OwnCloud</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -16,6 +16,10 @@
 
 
   <link rel="stylesheet" type="text/css" href="css/personalizado.css">
+
+    <!-- Scripts personalizados -->
+  <script src="js/personalizado.js" type="text/javascript" charset="utf-8" async defer></script>
+
   
 </head>
 <body>
@@ -32,11 +36,11 @@
     </div>
     <div class="collapse navbar-collapse" id="navegador">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="index.html">Inicio</a></li>
-        <li><a href="#">PHP-MySql</a></li>
-        <li><a href="#">Wordpress</a></li>
-        <li><a href="#">PrestaShop</a></li>
-        <li><a href="#">OwnCloud</a></li>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="php-mysql.html">PHP-MySql</a></li>
+        <li><a href="wordpressI.html">Wordpress</a></li>
+        <li><a href="prestashop.html">PrestaShop</a></li>
+        <li class="active"><a href="#">OwnCloud</a></li>
         <li id="dificultadesli"><a href="dificultades.html">Dificultades</a></li>
 
 
@@ -46,11 +50,22 @@
 </nav>
 <ul class="breadcrumb">
   <li><a href="index.html">Inicio</a></li>
-  <li>OwnCloud+'0mik9¡
-  8</li>
+  <li>OwnCloud</li>
 </ul> 
+
+
+
+
+<!-- FLECHA DE INICIO -->
+<div class="row">
+  <aside id="flechaarriba" class="col-xs-offset-11 col-xs-1">
+   <a href="#" data-target="#nav" alt="Subir al principio de la página." title="Ir al menu principal">^</a>
+  </aside>
+</div>
+
+<!-- FIN FLECHA DE INICIO -->
 <section class="container text-center row content">    
-  <aside class="col-xs-12 col-sm-2">
+  <aside class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
       <p><a href="#1">1.Descarga OwnCloud</a></p>
       <p><a href="#2">2.Descomprimir</a></p>
       <p><a href="#3">3.Mover Carpeta</a></p>
@@ -77,9 +92,9 @@
   <!-- Aqui se incluye el cont enido 
   https://www.w3schools.com/bootstrap/bootstrap_typography.asp
   <img class="img-rounded img-responsive" src="imagenes/correcto.png" alt="PONERALGOAQUI">-->
-  <article class="text-left col-sm-8 text-left"> 
+  <article class="text-left col-xs-12 col-sm-12 col-md-10 col-lg-10"> 
       <h1> OwnCloud </h1>
-    <ul class="list-unstyled">
+    <ul class="list-unstyled" id="listaarticulo">
       <li><a name="1"></a> <h3>Descarga OwnCloud</h3> 
         <p>Lo primero sera descargar la ultima version de ownCloud, es muy facil de descargar ya que solo hay que comprobar que tenemos conexión a internet, y ecribir el siguiente comando:</p>
         <code>wget http://download.owncloud.org/community/owncloud-latest.tar.bz2</code>
@@ -102,7 +117,7 @@
       </li>
       <li><a name="6"></a> <h3>Comprobar Errores</h3> 
         <p>Una vez hecho esto, accederemos desde el navegador. Recordad que se accede asi... <span class="bg-info">x.x.x.x/owncloud</span></p>
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/1.png" alt="Se accede a la pagina correctamente, pero tiene errores">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/1.png" alt="Se accede a la pagina correctamente, pero tiene errores" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(1)">
       </li> 
       <li> <a name="7"></a><h3>Resolver Errores</h3> 
         <p>Puede que nos de <span class="text-danger">algunos errores</span> como se ve en la imagen anterior, así que habra que <mark></mark>instalar</mark> algunos los siguientes paquetes.</p>
@@ -132,56 +147,164 @@
       </li>  
       <li><a name="13"></a><h3>Conexion desde Owncloud</h3> 
         <p> Ahora vamos al navegador y rellenaremos los campos acorde a la base de datos que hemos creado.</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/2.png" alt="Se rellenan los campos basandose en nuestros campos">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/2.png" alt="Se rellenan los campos basandose en nuestros campos" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(2)">
       </li> 
       <li><a name="14"></a><h3>Logueo en OwnCloud</h3> 
         <p>Cuando le demos a Completar la instalacion, nos pedira que nos logueemos, una vez dentro, <span class="bg-success">ya tendremos nuestro owncloud listo</span> para usarse</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/3.png" alt="Login en nuestea pagina">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/3.png" alt="Login en nuestea pagina" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(3)">
       </li> 
       <li><a name="15"></a><h3>Interfaz Owncloud</h3> 
         <p>Ahora ya podemos usar nuestro owncloud, pero no al 100%, solo podremos subir y descargar archivos aparte de compartirlos con otros usuarios</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/4.png" alt="Limitacion de ownCloud">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/4.png" alt="Limitacion de ownCloud" title="Haz click para agrandar la imágen."onclick="abrirGaleria();imagenClicada(4)">
       </li> 
       <li><a name="16"></a><h3>Owncloud Market</h3> 
         <p>Desde ownCloud se pueden subir y descargar ficheros, pero no se pueden editar en línea, un plugin muy interesante sería el Text Editor, que nos permite editar en línea, para instalarlo hay que clicar en Archivos → Market, iremos al mercado de plugins de ownCloud</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/5.png" alt="Owncloud Market">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/5.png" alt="Owncloud Market" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(5)">
       </li>
       <li><a name="17"></a><h3>Text Editor</h3> 
         <p>Buscaremos dicho Plugin, y clicamos en el.</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/6.png" alt="Text Editor Plugin">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/6.png" alt="Text Editor Plugin" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(6)">
       </li>  
       <li><a name="18"></a><h3>Instalacion PlugIn</h3> 
         <p>Y le damos a Instalar.</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/7.png" alt="Limitacion de ownCloud">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/7.png" alt="Limitacion de ownCloud" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(7)">
       </li>  
       <li><a name="19"></a><h3>Comprobar PlugIn</h3> 
         <p>Y ahora podremos crear y editar archivos .txt desde el propio ownCloud.</p> 
-        <img class="img-rounded img-responsive" src="imagenes/owncloud/8.png" alt="Limitacion de ownCloud">
+        <img class="img-rounded img-responsive" src="imagenes/owncloud/8.png" alt="Limitacion de ownCloud" title="Haz click para agrandar la imágen." onclick="abrirGaleria();imagenClicada(8)">
       </li>
 
-
-
-
-    </ul>
-
-  
+    </ul>  
   </article>
 </section>
 
-
-
-
-
-
-
-
-
-
-
-
-
+<!-- GALERIA DE IMAGENES -->
   
+  <div id="miGaleria" class="galeria">
+    <span class="cerrar cursor" onclick="cerrarGaleria()">&times;</span>
+    <div class="contenidoGaleria">
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">1 / 8</div>
+        <img src="imagenes/owncloud/1.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">2 / 8</div>
+        <img src="imagenes/owncloud/2.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">3 / 8</div>
+        <img src="imagenes/owncloud/3.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">4 / 8</div>
+        <img src="imagenes/owncloud/4.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">5 / 8</div>
+        <img src="imagenes/owncloud/5.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">6 / 8</div>
+        <img src="imagenes/owncloud/6.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">7 / 8</div>
+        <img src="imagenes/owncloud/7.png" style="width:100%">
+      </div>
+
+      <div class="misImagenes">
+        <div class="numeracionImagenes">8 / 8</div>
+        <img src="imagenes/owncloud/8.png" style="width:100%">
+      </div>
+
+      <a class="imagenAnterior" onclick="pasarImagenes(-1)">&#10094;</a>
+      <a class="imagenSiguiente" onclick="pasarImagenes(1)">&#10095;</a>      
+      
+    </div>
+  </div>
+  <!-- FIN GALERIA DE IMAGENES -->
+
+
+
+
+<!-- FOOTER -->
     
+    <footer>
+    <div class="container">
+        <div class="row">
+        <!-- Salta columnas(offset) y ocupa 3 -->
+        <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4">
+            <h4>Contacto</h4>
+            <p></p>
+            <ul class="redes-sociales">
+            <a href="https://www.facebook.com" data-toggle="tooltip" data-placement="bottom" title="¡Facebook!"><i class="fa fa-facebook"></i></a>
+
+            <a href="https://www.twitter.com" data-toggle="tooltip" data-placement="bottom" title="¡Twitter!"><i class="fa fa-twitter"></i></a>
+
+            <a href="https://www.youtube.com" data-toggle="tooltip" data-placement="bottom" title="¡Youtube!"><i class="fa fa-youtube-play"></i></a>
+
+            <a href="https://plus.google.com" data-toggle="tooltip" data-placement="bottom" title="¡Google +!"><i class="fa fa-google"></i></a>
+            </ul>
+            </div>
+      
+        <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4">
+            <h4>¡Dona a nuestra Wiki!</h4>
+            <p>Haz un donativo a nuestra Wiki, así podremos seguir realizando tutoriales.</p>
+            <ul>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="American Express"><i class="fa fa-cc-amex"></i></a></li>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="PayPal"><i class="fa fa-paypal"></i></a></li>
+            <li><a href="#" data-toggle="tooltip" data-placement="bottom" title="Visa"><i class="fa fa-cc-visa"></i></a></li>
+            <li><button class="btn btn-primary disabled" data-toggle="modal" data-target="#myModal" type="">Donar</button></li>
+
+            </ul>
+            </div>
+
+            <div class="col-xs-12  col-sm-4 col-md-4 col-lg-4">
+              <h4>Sugerencias</h4>
+              <a href="mailto:contacto@WikiG3.com"">contacto@WikiG3.com</a>
+            </div>
+        </div>
+        <hr>
+        
+        <div class="text-center"> © 2017-2018. Wiki 2 G3 Copyright.</div>
+        </div>
+    </footer>
+    
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+      
+        <!-- header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Mensaje</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- body -->
+        <div class="modal-body">
+          Lamentablemente no es posible realizar esta acción actualmente.
+          Estamos trabajando en ello.
+          Atentamente, Wiki2 G3.
+        </div>
+        
+        <!-- footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  <!-- FIN MODAL -->
 
 </body>
 </html>
