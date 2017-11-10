@@ -4,7 +4,6 @@
   <title>Wiki 2 G3</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- Link css -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -39,9 +38,11 @@
         <li><a href="prestashop.html">PrestaShop</a></li>
         <li><a href="owncloud.html">OwnCloud</a></li>
         <li id="dificultadesli"><a href="dificultades.html">Dificultades</a></li>
-
-
       </ul>
+            <ul class="nav navbar-nav navbar-right">
+          <li><a href="mapa.html"><span class=" glyphicon glyphicon-globe"></span> Mapa del sitio</a></li>
+      </ul>
+      </div>
     </div>
   </div>
 </nav>
@@ -82,21 +83,21 @@
         <td>PHP-MySql</td>
         <td>20 minutos</td>
         <td>Fácil</td>
-        <td><a href="Manuales/PHP-MYSQL.docx" download="PHP-MySql.docx">Descarga</a></td>
+        <td><a href="Manuales/" download="PHP-Mysql.docx"><span class="glyphicon glyphicon-download-alt"> Descarga</span></a></td>
         </tr>
         <tr class="success">
         <td>3</td>
         <td>OwnCloud</td>
         <td>180 minutos</td>
         <td>Fácil</td>
-        <td><a href="Manuales/INSTALACION OWNCLOUD.docx" download="OwnCloud.docx">Descarga</a></td>
+        <td><a href="Manuales/" download="PHP-Mysql.docx"><span class="glyphicon glyphicon-download-alt"> Descarga</span></a></td>
         </tr>
         <tr class="warning">
         <td>2</td>
-        <td>WordPress</td>
+        <td>Wordpress</td>
         <td>180 minutos</td>
         <td>Media</td>
-        <td><a href="Manuales/WORDPRESS.docx" download="WordPress.docx">Descarga</a></td>
+        <td><a href="Manuales/" download="PHP-Mysql.docx"><span class="glyphicon glyphicon-download-alt"> Descarga</span></a></td>
         </tr>
 
         <tr class="danger">
@@ -104,24 +105,27 @@
         <td>PrestaShop</td>
         <td>120 minutos</td>
         <td>Difícil</td>
-        <td><a href="Manuales/PRESTASHOP.docx" download="PrestaShop.docx">Descarga</a></td>
+        <td><a href="Manuales/" download="PHP-Mysql.docx"><span class="glyphicon glyphicon-download-alt"> Descarga</span></a></td>
         </tr>
         </tbody>
         </table>
         </div>
         </article>
       </div>
-
     <div class="item">
-      <article id="indicearticulo" class="col-sm-offset-2 col-sm-8 text-left"> 
+
+
+      <article id="indicearticulo" class="col-sm-offset-2 col-sm-8 text-left"> <a href="dificultades.html" data-toggle="tooltip" data-placement="bottom" title="¡Haz click para acceder!">
       <h1 class="page-header">Dificultades</h1>
       <p>En esta sección se expondran las diferentes dificultades que hemos ido encontrando en el transcurso del reto.</p>
+      </a>
       <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/incorrecto.png" alt="imagen incorrecto">
-      <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/Flecha-derecha.png" alt="">
+      <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/Flecha-derecha.png" alt="imagen flecha">
       <img class="col-xs-4 col-sm-4 col-md-4 col-lg-4" src="imagenes/correcto.png" alt="imagen correcto">
       </article>
-    </div>
 
+
+    </div>
 
 
 
@@ -249,11 +253,4 @@
 
 
 </body>
-<A/html>
-
-<!-- Script del Tooltip de las redes sociales -->
-<script>
-$(document).ready(function(){
-    $('[data-toggle="tooltip"]').tooltip();
-});
-</script>
+</html>
