@@ -1,0 +1,675 @@
+#cerrarsesion{
+  border:0px solid black;
+  background: #f8f8f8;
+  margin-top: 13px;
+}
+#cerrarsesion:hover{
+  color: #ff6666;
+
+}
+
+#vermas{
+  color: #66ccff;
+  border-top: 2px solid #004466;
+}
+
+
+
+
+
+
+/* INICIO FORMULARIO INICIAR SESION */
+
+#formulogin{
+    width: 20%;
+    margin-bottom: 1em;
+    margin-left: 80%;
+    display: none;
+}
+
+
+#formulogin input[type="reset"]{
+    background: #708090;
+    color: white;
+    width: 8.8em;
+}
+
+#formulogin input[type="submit"]{
+    width: 8.8em;
+}
+
+
+/* FIN FORMULARIO INICIAR SESION */
+
+
+
+/* INICIO REDES SOCIALES */
+.redes_sociales{
+z-index: 10;
+display: none;
+position: fixed;
+margin-top: 20px;
+list-style: none;
+
+
+}
+#btnocultar{
+    z-index: 11;
+    position: fixed;
+    display: none;
+
+}
+
+#btnmostrar{
+position: fixed;
+z-index: 10;
+
+}
+
+.redes_sociales .fa{
+    font-size: 30px;
+    color: white;
+    width: 1.5em;
+    text-align: center;
+    padding: 8px;
+    border-radius: 10em;
+    margin-top:0.2em;
+}
+.redes_sociales .fa-twitter{
+    background:  #4db8ff;
+}
+.redes_sociales .fa-facebook{
+    background:  #4d4dff;
+}
+.redes_sociales .fa-google-plus{
+    background:  #ff3333;
+}
+/* FIN REDES SOCIALES */
+
+
+
+/* INICIO CARRUSEL */
+
+
+#carrusel_section img{
+    width: 100%;
+    height: 200px;
+}
+#carrusel .item{
+  height: 200px;
+}
+
+#carrusel_section{
+  background: #c2c0bc;
+}
+/* FIN CARRUSEL */
+
+
+
+#sectioncomentarios{
+  margin-left: 15%;
+}
+
+#sectioncomentarios #divgirar{
+  border: 2px solid black;
+  height: 200px;
+  margin: 0 10px 20px 0;
+  overflow-x: scroll;
+
+  }
+
+
+
+
+
+
+
+
+/* INICIO FOOTER */
+#footerpie {
+    background-color: #3c3d41;
+    color: white;
+}
+
+
+#footerpie p {
+    color: #ccc;
+    background-color: #333333;
+    text-align: center;
+    width: 100%;
+    margin:0;
+    padding: 0.5em;
+
+}
+
+#footerpie ul {
+    list-style-type: none;
+    padding-left: 0;
+    line-height: 1.7;
+}
+
+#footerpie h5 {
+    font-size: 18px;
+    color: white;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+#footerpie img{
+    text-align: center;
+    padding-top: 2%;
+    width: 80%;
+}
+
+#footerpie a {
+    color: #d2d1d1;
+    text-decoration: none;
+}
+
+#footerpie a:hover,
+#footerpie a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+/* FIN FOOTER */
+
+
+
+
+
+/* INICIO PAGINA REGISTRO */
+#bodyform {
+  background: #c1bdba;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+#formureg {
+  background: #2f3535;
+  padding: 40px;
+  max-width: 600px;
+  margin: 40px auto;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px 4px rgba(19, 35, 47, 0.3);
+}
+
+
+
+#formureg h1 {
+  text-align: center;
+  color: #ffffff;
+  font-size: 40px;
+  margin: 0 0 40px;
+}
+
+
+
+#formureg input {
+  font-size: 22px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+  background: none;
+  background-image: none;
+  border: 1px solid #a0b3b0;
+  color: #ffffff;
+  border-radius: 0;
+
+}
+#formureg input:focus {
+  outline: 0;
+  border-color:  #839192 ;
+}
+
+
+#formureg .field-wrap {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+
+#formureg .button {
+  border: 2px solid black;
+  outline: none;
+  border-radius: 0;
+  padding: 15px 0;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: .1em;
+  background:  #839192 ;
+  color: #ffffff;
+  margin: 2px;
+}
+#formureg .button:hover, .button:focus {
+  background:  #839192 ;
+}
+
+#formureg .button-block {
+  display: block;
+  width: 100%;
+}
+
+#botonregistrar{
+cursor:not-allowed;
+}
+
+
+
+/* FIN PAGINA REGISTRO */
+
+
+
+
+
+/* INICIO PANEL ADMINISTRADOR */ 
+
+
+#ContenidoUsuario, #ContenidoEntrada, #ContenidoComentario{
+  display: none;
+  background: #EAECEC;
+  border: 5px solid #333333;
+  margin-bottom: 5%;
+}
+
+
+#ContenidoUsuario input, #ContenidoEntrada input, #ContenidoComentario input{
+  background: white;
+  text-align: center;
+  border: 2px solid #333333;
+}
+
+
+#ContenidoUsuario input:focus, #ContenidoEntrada input:focus, #ContenidoComentario input:focus{
+  padding: 0.5%;
+
+}
+
+
+#eliminarC, #cancelarC{
+  margin-bottom: 25px;
+}
+
+
+#lbltrampa, #lbltrampaE{
+  visibility: hidden;
+}
+
+
+#selectUsuarios, #selectEntradas{
+  width: 200px;
+  padding: 0.5%;
+  background: #EAECEC;
+  border-radius: 10%;
+}
+
+
+#selectUsuarios:focus, #selectEntradas:focus{
+  border: 2px solid #333333;
+}
+
+
+/*Formulario de subir archivos en entradas*/
+#formusubir{
+  border:2px solid black;
+}
+#formusubir input{
+  border: 0px;
+  background: transparent;
+}
+
+/*Fin formulario de subir archivos en entradas*/
+
+
+
+
+
+/* Inicio imagenes subidas */
+article#imagenesart img{
+  width: 100%;
+}
+article#imagenesart p{
+  font-size: 20px;
+}
+article#imagenesart{
+  border-left: 2px solid black;
+  border-top: 2px solid black;
+  display: none;
+}
+
+
+
+
+
+/* Fin imagenes subidas */
+
+
+
+#mostrarE{
+  display: inline-flex;
+}
+
+
+#botonesUsuario, #botonesEntrada, #botonesComentario{
+  margin-top: 5%;
+}
+
+
+#administrarAside li{
+  color: #333333;
+}
+
+
+#administrarAside a{
+  text-decoration: none;
+}
+
+
+#administrarTabla tbody tr:hover, tr:checked{
+  background: #333333;
+  color:  white;
+}
+
+
+
+/*  FIN PANEL ADMINISTRADOR */
+
+
+
+
+
+/* INICIO ENTRADA */
+
+h2{
+    margin-left: 1%;
+}
+
+.artentrada{
+    margin-bottom: 5%;
+    margin-left: 1.5%
+}
+
+
+.artentrada1{
+  background: lightgrey;
+}
+
+
+#diventrada img{
+width: 70%;
+}
+
+#diventrada{
+  background: white;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  padding-bottom: 30px;
+  z-index: 2;
+  box-shadow: 10px 10px 10px grey;
+  transform: translateX(0);
+}
+
+#diventrada:before{
+  content:"";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 0 25px 25px 0;
+  border-style: solid;
+  border-color: grey lightgrey;
+  transition-duration:0.3s;
+}
+
+#diventrada:hover:before{
+  border-width: 0 50px 50px 0;
+  border-color: grey lightgrey;
+}
+
+
+
+
+
+
+.divart{
+    width: 60%;
+    float: left;
+}
+.areacoment{
+    max-height: 8em;
+    min-height: 8em;
+    max-width:50%;
+    min-width: 50%;
+    resize: none;
+}
+
+
+.areapost{
+    max-height: 8em;
+    min-height: 8em;
+    max-width:90%;
+    min-width: 90%;
+}
+
+
+
+.imgart{
+    width: 30%;
+    height: 15em;
+    margin-left: 5%;
+}
+
+.hrcoment{
+    border-width: 5px;
+}
+
+.imgnucoment{
+    width: 5%;
+    margin-top: -11.4%;
+}
+
+.imgcoment{
+    width: 70px;
+    height: 70px;
+    float: left;
+}
+
+.envcoment{
+    margin-top: 2px;
+    margin-left: 73px;
+}
+.contcoment{
+    margin-left: 4%; 
+    margin-right: 25%;
+}
+.nomusuario{
+    font-weight: bold;
+}
+
+.fechacom{
+    color: grey;
+    font-style: italic;
+}
+
+.divcoment{
+    margin-bottom: 3%;
+    margin-left: 3%;
+    border-bottom: 3px solid gray;
+    padding: 20px;
+}
+
+#texto{
+    margin-left: 10%;
+    margin-right: 10%;
+    max-width: 80%;
+}
+
+
+
+/* FIN ENTRADA */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 799px) {
+
+  #footerpie {
+    text-align: center;
+  }
+
+
+  #footerpie img{
+    width: 30%;
+  }
+
+
+  #formulogin{
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2em;
+    display: none;
+  }
+
+
+  #formulogin input[type="reset"]{
+    background: #708090;
+    color: white;
+    width: 10em;
+  }
+
+
+  #formulogin input[type="submit"]{
+    width: 10em;
+  }
+  
+
+  #selectUsuarios, #selectEntradas{
+    width: 55%;
+  }
+
+
+  #lblContraseña{
+    width: 80%;
+  }
+
+
+  #botonesUsuario{
+    width: 100%;
+  }
+  
+
+  #nuevoU, #cancelarU, #guardarU, #eliminarU{
+    width: 24%;
+  }
+
+  
+  #titu{
+    width: 87%;
+  }
+
+
+  #botonesEntrada{
+    width: 100%;
+  }
+
+
+  #nuevaE, #cancelarE, #guardarE, #eliminarE{
+    width: 24%;
+  }
+}
+
+
+
+@media screen and (max-width: 499px) {
+
+  #footerpie {
+    text-align: center;
+  }
+
+
+  #footerpie img{
+    width: 30%;
+  }
+
+
+  #formulogin{
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 2em;
+    display: none;
+  }
+
+
+  #formulogin input[type="reset"]{
+    background: #708090;
+    color: white;
+    width: 10em;
+  }
+
+
+  #formulogin input[type="submit"]{
+    width: 10em;
+  }
+  
+
+  #selectUsuarios, #selectEntradas{
+    width: 55%;
+  }
+
+
+  #lblContraseña{
+    width: 70%;
+  }
+
+
+  #botonesUsuario{
+    width: 100%;
+  }
+  
+
+  #nuevoU, #cancelarU, #guardarU, #eliminarU{
+    width: 24%;
+  }
+
+  
+  #titu{
+    width: 80%;
+  }
+
+
+  #botonesEntrada{
+    width: 100%;
+  }
+
+
+  #nuevaE, #cancelarE, #guardarE, #eliminarE{
+    width: 24%;
+  }
+}
+
