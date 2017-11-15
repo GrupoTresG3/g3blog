@@ -68,8 +68,10 @@ setcookie($cookie_nombre, $cookie_contenido); // 86400 = 1 day
 
 <!-- si la variable de sesion esta creada te envia a la pagina de logueado sino te carga el header invitado -->
 <?php 
+    session_name("usuariologueado");
+    session_start();
 if (isset($_SESSION['usuario'])){
-  return header('Location:logueado.php');
+  header('Location:logueado.php');
 
 }
 else{
@@ -102,6 +104,21 @@ require_once('cabecerainvitado.php');
 </form>
 <!-- FIN FORMULARIO -->
 
+<!-- Guardar usuario y contraseña introducido anteriormente -->
+<script>
+window.onload=function(){
+	if (localStorage.nombre!=undefined) {
+	document.getElementById('usuario').value=localStorage.nombre;
+	document.getElementById('contrasena').value=localStorage.contrasena;
+	}
+}
+
+document.getElementById('enviar').addEventListener("click",function(){
+	localStorage.setItem("nombre",document.getElementById('usuario').value);
+	localStorage.setItem("contrasena",document.getElementById('contrasena').value);
+
+});
+</script>
 
 
 

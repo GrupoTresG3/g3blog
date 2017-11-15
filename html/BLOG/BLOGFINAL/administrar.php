@@ -422,8 +422,7 @@
           echo "<input type='text' name='lblContraseña'/>";
 
           //Label trampa para poder modificar el usuario seleccionado en el desplegable.
-          echo "<input type='text' name='lbltrampa' id='lbltrampa' value='$usuarioModificar'/>";
-
+          echo "<input type='text' name='lbltrampa' id='lbltrampa' value='$usuarioModificar'/>";   
         } /*Aquí se cierra el if de mostrar para que los datos aparezcan solo al clicar en el botón*/       
 
           ?>
@@ -467,27 +466,35 @@
           //Si se ha pulsado el botón guardar.
           if(isset($_POST['guardarU'])){
 
+
             //Encriptar contraseña.
             $contraseñaEncriptada = md5($_POST['lblContraseña']);
 
             //Coger el nombre de usuario que hay en el input.
             $usuarioActual = $_POST['usu'];
 
+
+
+          	// Renombrar directorio
+          	rename("uploads/user_imagenes/".$_POST['lbltrampa']."", "uploads/user_imagenes/".$usuarioActual."");
+
+
+
             //Preparar consulta.
             $sql = ("UPDATE usuario SET nombre = '".$usuarioActual."', correo = '".$_POST['correoNuevo']."', verificado = '1', pass = '".$contraseñaEncriptada."' WHERE nombre='".$_POST['lbltrampa']."'");
 
             //Realizar la consulta.
             $consulta = $basedatos -> query($sql);
+     		
 
             //Mensaje de confirmación.
             echo "<h4>¡Usuario actualizado correctamente!</h4>";
 
             //Hacer que el ContenidoUsuario sea visible porque si no al recargar la página se cierra.
             echo "<script>  document.getElementById('ContenidoUsuario').style='display:block;';</script>";
-
-
             /*Cambiar el color y el color de fondo*/
             echo "<script> document.getElementById('administrarU').style='background: #333333; color: white;';</script>";
+
           }
 
         ?>
