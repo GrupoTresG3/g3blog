@@ -8,10 +8,6 @@
 
 }
 
-#vermas{
-  color: #66ccff;
-  border-top: 2px solid #004466;
-}
 
 
 
@@ -312,13 +308,13 @@ cursor:not-allowed;
 
 /*Formulario de subir archivos en entradas*/
 #formusubir{
-  border:2px solid black;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
 }
 #formusubir input{
   border: 0px;
   background: transparent;
 }
-
 /*Fin formulario de subir archivos en entradas*/
 
 
@@ -464,14 +460,16 @@ width: 70%;
 }
 
 .imgnucoment{
-    width: 5%;
-    margin-top: -11.4%;
+    width: 80px;
+    height: 80px;
+    margin-top: -100px;
 }
 
 .imgcoment{
     width: 70px;
     height: 70px;
     float: left;
+    margin-right: 20px;
 }
 
 .envcoment{

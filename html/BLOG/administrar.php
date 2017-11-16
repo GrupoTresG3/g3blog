@@ -257,7 +257,7 @@
 <section class="container text-justify row">  
 
   <!-- INICIO ASIDE -->
-  <aside id="administrarAside" class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+  <aside id="administrarAside" class="col-xs-12 col-sm-12 col-md-2 col-lg-2">
 
     <ul class="list-group nav nav-tabs">
 
@@ -422,8 +422,7 @@
           echo "<input type='text' name='lblContraseña'/>";
 
           //Label trampa para poder modificar el usuario seleccionado en el desplegable.
-          echo "<input type='text' name='lbltrampa' id='lbltrampa' value='$usuarioModificar'/>";
-
+          echo "<input type='text' name='lbltrampa' id='lbltrampa' value='$usuarioModificar'/>";   
         } /*Aquí se cierra el if de mostrar para que los datos aparezcan solo al clicar en el botón*/       
 
           ?>
@@ -467,27 +466,35 @@
           //Si se ha pulsado el botón guardar.
           if(isset($_POST['guardarU'])){
 
+
             //Encriptar contraseña.
             $contraseñaEncriptada = md5($_POST['lblContraseña']);
 
             //Coger el nombre de usuario que hay en el input.
             $usuarioActual = $_POST['usu'];
 
+
+
+          	// Renombrar directorio
+          	rename("uploads/user_imagenes/".$_POST['lbltrampa']."", "uploads/user_imagenes/".$usuarioActual."");
+
+
+
             //Preparar consulta.
             $sql = ("UPDATE usuario SET nombre = '".$usuarioActual."', correo = '".$_POST['correoNuevo']."', verificado = '1', pass = '".$contraseñaEncriptada."' WHERE nombre='".$_POST['lbltrampa']."'");
 
             //Realizar la consulta.
             $consulta = $basedatos -> query($sql);
+     		
 
             //Mensaje de confirmación.
             echo "<h4>¡Usuario actualizado correctamente!</h4>";
 
             //Hacer que el ContenidoUsuario sea visible porque si no al recargar la página se cierra.
             echo "<script>  document.getElementById('ContenidoUsuario').style='display:block;';</script>";
-
-
             /*Cambiar el color y el color de fondo*/
             echo "<script> document.getElementById('administrarU').style='background: #333333; color: white;';</script>";
+
           }
 
         ?>
@@ -516,7 +523,7 @@
 
 
             //Mensaje de confirmación.
-            echo "<h4>¡Entrada eliminada correctamente!</h4>";
+            echo "<h4>¡Usuario eliminado correctamente!</h4>";
 
 
             //Hacer que el ContenidoEntrada sea visible porque si no al recargar la página se cierra.
@@ -551,11 +558,13 @@
 
     <h1 class='page-header'>ENTRADAS</h1>
     <!-- Formulario subir archivos -->
+    <hr>
     <form id="formusubir" method="post" enctype="multipart/form-data">
          <h3>Subir imágenes</h3><input type="file" name="foto" />
           <button type="submit" class="btn btn-primary" name="subir" >Subir archivo</button>
           <button  id="imagenessubidas" type="submit" class="btn btn-primary" name="imagenes" >Mis imágenes</button>
     </form>
+    <hr>
     <script>
      // funcion que controla el boton de ver imagenes
       document.getElementById('imagenessubidas').addEventListener("click",function(formu){
@@ -803,7 +812,7 @@
 
 
   <!-- INICIO ARTICLE CONTENIDO COMENTARIOS -->
-  <article id="ContenidoComentario" class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
+  <article id="ContenidoComentario" class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
 
     <h1 class='page-header'>COMENTARIOS</h1>
 
@@ -815,12 +824,12 @@
         <table class = "table table-striped" id="administrarTabla">
           <thead>
             <tr>
-              <th>Número</th>
               <th>Usuario</th>
               <th>Entrada</th>
               <th>Fecha</th>
               <th>Contenido</th>
               <th>Eliminar</th>
+              <th>Número</th>
             </tr>
           </thead>
           <tbody>
@@ -845,12 +854,13 @@
                   
                 echo 
                 "<tr id='seleccionTabla'>
-                  <td>$comentario->numero_comentario</td>
                   <td>$comentario->usuario_comentario</td>
                   <td>$comentario->titulo_entrada</td>
                   <td>$comentario->fecha</td>
                   <td>$comentario->contenido</td>                
-                  <td><input type='checkbox' id='eliminarChk' name='eliminarChk[]' value='$comentario->numero_comentario'></td>                
+                  <td><input type='checkbox' id='eliminarChk' name='eliminarChk[]' value='$comentario->numero_comentario'></td>   
+                  <td>$comentario->numero_comentario</td>
+             
                 </tr>";
 
                 $numeroComentario = $comentario->numero_comentario;

@@ -52,7 +52,15 @@ $(document).ready(function(){
       document.getElementById("inpuhid").value = valor;
       document.forms["formentr"].submit();
   });  
-   
+
+    $('#enlacenav').on('click', function(){
+      document.getElementById("inpuhid").value = "Dificultades";
+      document.forms["formentr"].submit();
+  }); 
+    $('#enlacecarruseld').on('click', function(){
+      document.getElementById("inpuhid").value = "Dificultades";
+      document.forms["formentr"].submit();
+  }); 
 });
 
 
@@ -82,3 +90,7 @@ $(document).ready(function(){
           document.forms["formentr"].submit();
         });
   });
+
+
+
+      

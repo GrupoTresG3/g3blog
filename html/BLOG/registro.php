@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html >
   <head>
@@ -109,7 +110,6 @@
         } 
         } 
         ?>
-        <li ><a id="vermas" href="#">Ver más entradas</a></li>
         </ul>
         </li>
         </ul>
@@ -187,7 +187,7 @@
           <h1 id="hola">Formulario de registro</h1>
           <form name="form" action="registro.php" method="POST" enctype="multipart/form-data">
             <div class="field-wrap">
-              <input id="regusuario" type="text" name="usuario" placeholder="Usuario*"/>
+              <input id="regusuario" type="text" name="usuario" placeholder="Usuario 6 caracteres minimo*"/>
                         <p  id="p_usumal" style="color:red"></p>
 
             </div>
@@ -197,7 +197,7 @@
             </div>
             <div class="field-wrap">
 
-              <input id="pass1" type="password" name="pass1" placeholder="Contraseña*"/>
+              <input id="pass1" type="password" name="pass1" placeholder="Contraseña Numero, Mayus, Minus y 8 caracteres*"/>
             </div>
             <div class="field-wrap">
 

@@ -100,8 +100,8 @@ require_once('cabecerausuario.php');
 
 	  <!-- Elementos a cojer -->
 	  <div class="carousel-inner">
-	    <div class="item active">
-        <a href="dificultades.php">
+	    <div id="enlacecarruseld" class="item active">
+        <a href="#">
 	      	<div class="carousel-caption">
 	          <h3>Dificultades</h3>
 	        	<p>Aqui os mostramos las dificultades que hemos encontrado a lo largo del reto.</p>
@@ -183,6 +183,7 @@ require_once('cabecerausuario.php');
  	?>
 
 </section>
+
 
 
 

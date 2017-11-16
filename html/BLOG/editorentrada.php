@@ -60,7 +60,7 @@
   content_css: [
     '//fonts.googleapis.com/css?family=Lato:300,300i,400,400i',
     '//www.tinymce.com/css/codepen.min.css'
-B  ],
+  ],
   content_style: [
     'body{max-width:900px; padding:30px; margin:auto;font-size:16px;font-family:Lato,"Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.3; letter-spacing: -0.03em;color:#222} h1,h2,h3,h4,h5,h6 {font-weight:400;margin-top:1.2em} h1 {} h2{} .tiny-table {width:100%; border-collapse: collapse;} .tiny-table td, th {border: 1px solid #555D66; padding:10px; text-align:left;font-size:16px;font-family:Lato,"Helvetica Neue",Helvetica,Arial,sans-serif; line-height:1.6;} .tiny-table th {background-color:#E2E4E7}'
   ],
@@ -85,6 +85,20 @@ B  ],
           <button type="submit" class="btn btn-primary" name="subir" >Subir archivo</button>
           <button  id="imagenessubidas" type="submit" class="btn btn-primary" name="imagenes" >Mis imágenes</button>
 </form>
+    <?php
+    if (isset($_POST['subir'])) {
+
+    $control = getimagesize($_FILES["foto"]["tmp_name"]);
+    if($control !== false) {
+      // codigo PHP subir archivo "nombre temporal--donde se sube--nombre final"
+      move_uploaded_file($_FILES['foto']['tmp_name'],'uploads/entrada_imagenes/'.$_FILES['foto']['name']);
+
+    } else {
+      echo "No es una imagen!";
+
+    }
+    }
+    ?>
 </article>
 
 <section class="row">

@@ -30,7 +30,7 @@
     	<!-- Le da un estilo a la lista para cuando haces focus,hover... -->
       <ul class="nav navbar-nav">
         <li class="active"><a href="index.php"><span class="fa fa-home"></span> Inicio</a></li>
-        <li><a href="dificultades.php"> Dificultades</a></li>
+        <li><a id="enlacenav" href="#"> Dificultades</a></li>
 
 
         <?php 
@@ -53,7 +53,6 @@
         } 
         } 
         ?>
-        <li ><a id="vermas" href="#">Ver más entradas</a></li>
         </ul>
         </li>
         </ul>
